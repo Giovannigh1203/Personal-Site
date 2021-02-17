@@ -1,0 +1,674 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cuerpo{
+    background-image:  linear-gradient(rgba(238, 242, 243,0.9), rgb(255, 255, 255));
+    background-size: cover;
+    background-position: center;
+    font-family: Oswald;
+}
+/*Nav*/
+header{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    max-height: 100px;
+    background-color:rgba(0,0,0);
+    box-sizing: content-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-top{
+    display: flex;
+    position: fixed;
+    width: 80%;
+    transition: width 0.3s;
+}
+
+.navscroll{
+    display: flex;
+    position: fixed;
+    transition: width 0.3s;
+    height: 50px;
+    width: 100%;
+    background:black;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul{
+    margin-top:10px;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+nav ul a:hover{
+    background-color:#FF0033;
+    text-decoration: none;
+    color: white;
+}
+/* //nav*/
+
+
+/* Inicio*/
+.acerca-de .foto{
+    text-align: center;
+}
+
+.acerca-de .foto img{
+    margin-bottom: 30px;
+}
+
+.acerca-de .foto .nombre{
+    color: #545454;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.explosion{
+    width: 50%;
+    height: 100px;
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.btn1{
+    width: 170px;
+    border: none;
+    border-radius: 5%;
+    background-color: #FF0033;
+    color: white;
+    font-size: 18px;
+}
+
+.btn2{
+    width: 170px;
+    border: 1 solid;
+    border-color: #FF0033;
+    border-radius: 5%;
+    background-color:white;
+    color: #FF0033;
+    font-size: 18px;
+}
+
+.btn1:hover{
+    background: linear-gradient(rgba(115, 3, 192,0.9), rgb(236, 56, 188));
+    color: white;
+}
+
+.btn2:hover{
+    border: none;
+    background: linear-gradient(rgba(168, 255, 120 ,0.9), rgb(120, 255, 214));
+    color: black;
+}
+/* //Inicio*/
+
+/* Intro */
+.big-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 5rem;
+    font-family: "Lobster", cursive;
+    color: rgb(61, 61, 61);
+  }
+  
+  .intro {
+    background:black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider{
+    background-image:  linear-gradient(rgba(237, 33, 58,0.9), rgb(101, 78, 163 ));
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+  }
+  
+  .intro-text {
+    color: rgb(255, 255, 255);
+    font-family: "Heebo", sans-serif;
+    font-size: 3rem;
+  }
+  
+  .hide {
+    background: black;
+    overflow: hidden;
+  }
+  
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
+
+  /* //Intro*/
+
+
+.informacion{
+    font-family: 'Raleway', sans-serif;
+    font-weight:200;
+    line-height: 40px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.informacion p{
+    font-size: 22px;
+}
+
+/* About*/
+.ab{
+    padding: 10px;
+}
+.about{
+    padding: 50px;
+    background-image:linear-gradient(rgba(255, 95, 109 ,0.9), rgba(255, 195, 113 ,0.7)),url(../img/slider3.jpg); 
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.about p{
+    font-size: 22px;
+}
+
+.box{
+    position:relative;
+    width: 200px;
+    height: 300px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:rgb(255, 255, 255,0.9);
+}
+
+.box .porcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .porcent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box .porcent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 40;
+    stroke-linecap: round;
+}
+
+.box .porcent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke:#f3f3f3;
+}
+.box .porcent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440-(40*0)/100);
+    stroke: #03a9f4;
+}
+
+.box .porcent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box .porcent .number h2{
+    font-size: 48px;
+}
+
+.box .porcent .number h2 span{
+    font-size: 24px;
+}
+
+.box .text{
+    padding: 10px 0;
+    color: #03a9f4;
+}
+
+/*Box css*/
+.box1{
+    position:relative;
+    width: 200px;
+    height: 300px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:rgb(255, 255, 255,0.9);
+}
+
+.box1 .porcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box1 .porcent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box1 .porcent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 60;
+    stroke-linecap: round;
+}
+
+.box1 .porcent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke:#f3f3f3;
+}
+.box1 .porcent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440-(60*0)/100);
+    stroke: orange;
+}
+
+.box1 .porcent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box1 .porcent .number h2{
+    font-size: 48px;
+}
+
+.box1 .porcent .number h2 span{
+    font-size: 24px;
+}
+
+.box1 .text{
+    padding: 10px 0;
+    color: orangered;
+}
+
+/* Box js*/
+.box2{
+    position:relative;
+    width: 200px;
+    height: 300px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:rgb(255, 255, 255,0.9);
+}
+
+.box2 .porcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box2 .porcent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box2 .porcent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 200;
+    stroke-linecap: round;
+}
+
+.box2 .porcent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke:#f3f3f3;
+}
+.box2 .porcent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440-(60*0)/100);
+    stroke: green;
+}
+
+.box2 .porcent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box2 .porcent .number h2{
+    font-size: 48px;
+}
+
+.box2 .porcent .number h2 span{
+    font-size: 24px;
+}
+
+.box2 .text{
+    padding: 10px 0;
+    color: green;
+}
+
+/*box Front*/
+.box3{
+    position:relative;
+    width: 200px;
+    height: 300px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:rgb(255, 255, 255,0.9);
+}
+
+.box3 .porcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box3 .porcent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box3 .porcent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 55;
+    stroke-linecap: round;
+}
+
+.box3 .porcent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke:#f3f3f3;
+}
+.box3 .porcent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440-(55*0)/100);
+    stroke: purple;
+}
+
+.box3 .porcent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box3 .porcent .number h2{
+    font-size: 48px;
+}
+
+.box3 .porcent .number h2 span{
+    font-size: 24px;
+}
+
+.box3 .text{
+    padding: 10px 0;
+    color: purple;
+}
+
+/* Box Back */
+.box4{
+    position:relative;
+    width: 200px;
+    height: 300px;
+    display: inline-flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background:rgb(255, 255, 255,0.9);
+}
+
+.box4 .porcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box4 .porcent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box4 .porcent svg circle{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 220;
+    stroke-linecap: round;
+}
+
+.box4 .porcent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke:#f3f3f3;
+}
+.box4 .porcent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440-(220*0)/100);
+    stroke: aqua;
+}
+
+.box4 .porcent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box4 .porcent .number h2{
+    font-size: 48px;
+}
+
+.box4 .porcent .number h2 span{
+    font-size: 24px;
+}
+
+.box4 .text{
+    padding: 10px 0;
+    color: rgb(52, 199, 199);
+}
+
+/* //About*/
+
+/*Targetas*/
+.servicios{
+    text-align: center;
+    padding: 30px;
+}
+.wrap{
+	width: 1100px;
+	margin: 50px auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tarjeta-wrap{
+	margin: 10px;
+	-webkit-perspective: 800;
+	perspective: 800;
+}
+
+.tarjeta{
+	width: 300px;
+	height: 350px;
+	background: #F29720;
+    position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: .7s ease;
+	transition: .7s ease;
+	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+    
+
+}
+
+.adelante, .atras{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.adelante{
+	width: 100%;
+}
+
+.atras{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	padding: 15px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	font-family: "open sans";
+    background: #F29720;
+}
+
+.tarjeta-wrap:hover .tarjeta{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.card1{
+	background-image: url(/img/.jpg);
+	background-size: cover;
+}
+
+.card2{
+	background-image: url(http://1.1m.yt/dlxMf3R.jpg);
+	background-size: cover;
+}
+
+.card3{
+	background-image: url(http://3.1m.yt/EUB_xE.jpg);
+	background-size: cover;
+}
+/*Targetas*/
+
+
+
+
+footer{
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+    font-family: 'Arial';
+}
+
+@media screen and (max-width:575px){
+    footer{
+        font-size: 15px;
+    }
+}
